@@ -52,12 +52,11 @@ window.onclick = function(event) {
     }
 }
 
-$(document).ready(function () {
+function dropMobMenu() {
+  document.getElementById("dropdownContentOfMobMenu").classList.toggle("show");
+}
 
-  function dropMobMenu() {
-    document.getElementById("dropdownContentOfMobMenu").classList.toggle("show");
-    document.getElementsByClassId("menuIcon").classList.remove("fas fa-times fa-2x white");
-  }
+$(document).ready(function () {
 
   //------------------------------------//
   //Scroll To//
