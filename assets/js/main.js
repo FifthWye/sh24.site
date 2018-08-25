@@ -59,6 +59,14 @@ function dropMobMenu() {
 $(document).ready(function () {
 
   //------------------------------------//
+  //Animaion on scroll//
+  //------------------------------------//
+  AOS.init({
+    easing: 'ease-out-back',
+    duration: 1000
+  });
+
+  //------------------------------------//
   //Scroll To//
   //------------------------------------//
   $(".scroll").click(function (event) {
