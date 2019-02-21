@@ -386,7 +386,6 @@ nav.menu a {
 
 .slideshow-container {
     position: relative;
-    margin-top:4%;
   }
   
 .slides {
@@ -404,7 +403,7 @@ nav.menu a {
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 40%;
     width: auto;
     margin-top: -30px;
     padding: 16px;
@@ -416,7 +415,6 @@ nav.menu a {
   }
   
 .next {
-    position: absolute;
     right: 0;
     border-radius: 3px 0 0 3px;
   }
