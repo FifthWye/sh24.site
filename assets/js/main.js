@@ -31,12 +31,22 @@ var modal = document.getElementById('m1');
 
 // Get the button that opens the modal
 var btn = document.getElementById("main-btn");
+var link1 = document.getElementById("makeOrderA1");
+var link2 = document.getElementById("makeOrderA2");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
+  modal.style.display = "block";
+}
+
+link1.onclick = function () {
+  modal.style.display = "block";
+}
+
+link2.onclick = function () {
   modal.style.display = "block";
 }
 

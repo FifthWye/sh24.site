@@ -19,6 +19,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="assets/css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|PT+Sans+Narrow" rel="stylesheet">
 </head>
 
@@ -40,7 +42,7 @@
                     <label>Телефон</label>
                     <input type="text" class="form-control" name="InputPhone" placeholder="Телефон">
                     <label>Краткое описание заказа</label>
-                    <textarea maxlength="560" type="description" id="InputDescription" name="InputDescription" class="form-control" placeholder="Введите краткое описание желаемого тура, чтоб наши сотрудники смогли подобрать Вам подходящий тур."
+                    <textarea maxlength="560" type="description" id="InputDescription" name="InputDescription" class="form-control" placeholder="Введите краткое описание вашего заказа"
                         required></textarea>
 
                     <button type='button' id="sendRequest">Отправить</button>
@@ -54,16 +56,16 @@
     <!-- The Modal -->
 
     <header>
-        <div class="gradient">
+        <div id="home" class="gradient">
             <div class="nav-bar">
-                <div class="nav-b-left">
+                <div class="nav-b-left" data-aos="fade-right">
                     <a class="logo" href="#">Южный Вeстник</a>
                 </div>
-                <div class="nav-b-right">
+                <div class="nav-b-right" data-aos="fade-left">
                     <nav class="menu">
-                        <a href="">Главная</a>
-                        <a href="">Сделать заказ</a>
-                        <a href="">О нас</a>
+                        <a href="#home" class="scroll">Главная</a>
+                        <a id="makeOrderA1" class="scroll">Сделать заказ</a>
+                        <a href="#faq" class="scroll">О нас</a>
                         <a href="#contacts" class="scroll">Контакты</a>
                     </nav>
 
@@ -73,13 +75,13 @@
                             <i id="menuIcon" class="fas fa-bars fa-2x white"></i>
                         </a>
                         <div id="dropdownContentOfMobMenu" class="dropdown-content">
-                            <a href="">Главная</a>
-                            <a href="">О нас</a>
+                            <a href="#home" class="scroll">Главная</a>
+                            <a href="#faq" class="scroll">О нас</a>
                             <a href="#contacts" class="scroll">Контакты</a>
-                            <a href="">Сделать заказ</a>
+                            <a id="makeOrderA2">Сделать заказ</a>
                         </div>
                     </div>
-                </div> 
+                </div>
 
             </div>
             <div class="slideshow-container" data-aos="zoom-out">
@@ -153,7 +155,7 @@
         </div>
     </header>
     <section id="faq">
-        <div class="s-container hvr-wobble-horizontal" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+        <div class="s-container" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <p>Есть вопросы? Не знаете как сделать заказ? Не знаете какой тип штампа/печати/услуг полиграфии вам нужен? Ответы
                 на все эти вопросы вы найдете здесь!</p>
         </div>
@@ -170,7 +172,7 @@
                         Кол-во
                     </th>
                     <th>
-                        Цены
+                        Цена
                     </th>
                 </thead>
                 <tbody>
@@ -207,6 +209,17 @@
                             170 грн.
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            Четвертый тип
+                        </td>
+                        <td>
+                            20 шт.
+                        </td>
+                        <td>
+                            190 грн.
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -218,38 +231,32 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <form method="post" action="#">
-                <div class="field">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" />
+            <div class="footer-c">
+                <div class="footer-c-l">
+                    <form method="post" action="#">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit">Отправить</button>
+                    </form>
                 </div>
-                <div class="field">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" />
+                <div class="footer-c-r">
+                    <ul class="contact-info">
+                        <li> <i class="fas fa-phone"></i>  (000) 000-0000</li>
+                        <li> <i class="fas fa-envelope"></i>  <a href="#">information@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Южный Вестник<br /> Старобазарный сквер, 3A, Одесса</li>
+                    </ul>
                 </div>
-                <div class="field">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="4"></textarea>
-                </div>
-                <ul class="actions">
-                    <li><input type="submit" value="Send Message" /></li>
-                </ul>
-            </form>
-            <ul class="contact-info">
-                <li class="fa-home">
-                    Company name<br /> 12345 Somewhere Street
-                </li>
-                <li class="fa-phone">(000) 000-0000</li>
-                <li class="fa-envelope"><a href="#">information@gmail.com</a></li>
-                <li class="fa-facebook"><a href="#">facebook.com/link</a></li>
-                <li class="fa-instagram"><a href="#">instagram.com/link</a></li>
-                <li class="fa-twitter"><a href="#">twitter.com/link</a></li>
-            </ul>
-            <ul class="copyright">
-                <li>&copy; All rights reserved.</li>
-            </ul>
-
-
+            </div>
         </div>
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1373.8256635269681!2d30.73460995832881!3d46.47541399478155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63184b2f346d3%3A0xd4033b605f0dd27!2zM0EsINCh0YLQsNGA0L7QsdCw0LfQsNGA0L3Ri9C5INGB0LrQstC10YAsIFN0YXJvYmF6YXJueWkgU3F1YXJlLCAz0JAsIE9kZXNhLCBPZGVzc2EgT2JsYXN0LCBVa3JhaW5lLCA2NTAwMA!5e0!3m2!1sen!2spl!4v1533018203654"
@@ -258,7 +265,7 @@
     </footer>
 </body>
 <script src="assets/js/aos.js"></script>
-<script defer src="assets/js/fontawesome-all.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="assets/js/ajax.js"></script>
 <script language="JavaScript" type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="assets/js/main.js"></script>
 
