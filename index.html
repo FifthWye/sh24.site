@@ -34,18 +34,18 @@
             <span class="close">&times;</span>
             <h2>Сделать заказ</h2>
             <div class="make-order">
-                <form role="form" id="ajax_form" method="POST" action="">
+                <form role="form" id="r-form" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbz4dR8Jg_FRuNVCR2KkR0F_6Hg-OODLD5bqXZaJmA/exec">
                     <label>Имя и Фамилия</label>
-                    <input type="text" class="form-control" name="InputName" placeholder="Имя и Фамилия" required>
+                    <input type="text" class="form-control" name="Name" placeholder="Имя и Фамилия" required/>
                     <label>E-mail</label>
-                    <input type="text" class="form-control" name="InputEmail" placeholder="Email" required>
+                    <input type="email" class="form-control" name="Email" placeholder="Email" required/>
                     <label>Телефон</label>
-                    <input type="text" class="form-control" name="InputPhone" placeholder="Телефон">
+                    <input type="phone" class="form-control" name="Phone" placeholder="Телефон"/>
                     <label>Краткое описание заказа</label>
-                    <textarea maxlength="560" type="description" id="InputDescription" name="InputDescription"
+                    <textarea maxlength="560" type="description" id="Description" name="Description"
                         class="form-control" placeholder="Введите краткое описание вашего заказа" required></textarea>
 
-                    <button type='button' id="sendRequest">Отправить</button>
+                    <button id="sendRequest">Отправить</button>
                 </form>
 
             </div>
@@ -59,7 +59,7 @@
         <div id="home" class="gradient">
             <div class="nav-bar">
                 <div class="nav-b-left" data-aos="fade-right">
-                    <a class="logo" href="#">Южный Вeстник</a>
+                    <a class="logo" onclick="window.location.reload(true);" href="#">Южный Вeстник</a>
                 </div>
                 <div class="nav-b-right" data-aos="fade-left">
                     <nav class="menu">
@@ -243,12 +243,7 @@
     <footer>
         <div id="contacts">
             <h2 class="major1 white">Contacts</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur.</p>
+            <p>Изготовим печати и штампы в течении часа, с последующим гарантийным обслуживанием! Изготовим по индивидуальному эскизу с элементами защиты.</p>
             <div class="footer-c">
                 <div class="footer-c-l">
                     <form method="post" action="#">
@@ -269,9 +264,9 @@
                 </div>
                 <div class="footer-c-r">
                     <ul class="contact-info">
-                        <li> <i class="fas fa-phone"></i> (000) 000-0000</li>
-                        <li> <i class="fas fa-envelope"></i> <a href="#">information@gmail.com</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> Южный Вестник<br /> Старобазарный сквер, 3A, Одесса
+                        <li> <a href="callto:+380506520530"><i class="fas fa-phone"></i> (380)506520530</li></a>
+                        <li> <a href="mailto:vestnikodessa@ukr.net"></a><i class="fas fa-envelope"></i> <a href="#">information@gmail.com</a></li>
+                        <li> <i class="fas fa-map-marker-alt"></i> Южный Вестник<br /> Старобазарный сквер, 3A, Одесса
                         </li>
                     </ul>
                 </div>
@@ -285,7 +280,7 @@
     </footer>
 </body>
 <script src="assets/js/aos.js"></script>
-<script language="JavaScript" type="text/javascript" src="assets/js/ajax.js"></script>
+<script data-cfasync="false" type="text/javascript" src="assets/js/form-submission-handler.js"></script>
 <script language="JavaScript" type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="assets/js/main.js"></script>
 

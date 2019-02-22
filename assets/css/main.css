@@ -119,6 +119,11 @@ footer{
     margin-right:20%;
 }
 
+.contact-info i{
+    height: 20px;
+    width: 20px;
+}
+
 .contact-info a{
     color:#fff;
     text-decoration: none;
@@ -386,6 +391,7 @@ nav.menu a {
 
 .slideshow-container {
     position: relative;
+    margin-top:5%;
   }
   
 .slides {
@@ -451,7 +457,7 @@ nav.menu a {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 3%; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -491,7 +497,9 @@ nav.menu a {
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
-.make-order input[type=text], 
+.make-order input[type=text],
+.make-order input[type=email],
+.make-order input[type=phone],
 .make-order select {
     width: 100%;
     margin: 8px 0;
