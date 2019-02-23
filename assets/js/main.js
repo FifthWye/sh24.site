@@ -26,16 +26,19 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-// Get the modal
+// Get the modals
 var modal = document.getElementById('m1');
+var questionModal = document.getElementById('mQ');
+var thankYouMessage = document.getElementById('mTy');
 
 // Get the button that opens the modal
 var btn = document.getElementById("main-btn");
 var link1 = document.getElementById("makeOrderA1");
 var link2 = document.getElementById("makeOrderA2");
+var showQuestionModal = document.getElementById("questionForm");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("close");
 
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
@@ -50,15 +53,28 @@ link2.onclick = function () {
   modal.style.display = "block";
 }
 
+showQuestionModal.onclick = function () {
+  questionModal.style.display = "block";
+}
+
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+for (var i = 0, len = span.length; i < len; i++) {
+  console.log(span[i]);
+  span[i].addEventListener("click",closeModals);
+}
+
+function closeModals() {
   modal.style.display = "none";
+  thankYouMessage.style.display = "none";
+  questionModal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal) {
+  if (event.target == modal || event.target == thankYouMessage || event.target == questionModal) {
     modal.style.display = "none";
+    thankYouMessage.style.display = "none";
+    questionModal.style.display = "none";
   }
 }
 

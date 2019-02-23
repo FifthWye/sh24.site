@@ -83,7 +83,7 @@ footer{
     margin: 0;
     width: 100%;
     background: linear-gradient(45deg, #0f7a0f , #99ff66);
-    position: relative;
+    position: absolute;
     color: #fff;
 }
 
@@ -91,6 +91,11 @@ footer{
     width: 100%;
     padding: 30px 100px;
 
+}
+
+#contacts h2,
+#contacts p {
+    text-align: center;
 }
 
 .footer-c{
@@ -110,13 +115,15 @@ footer{
     width: 50%;
     height: 100%;
 }
+.footer-c-r ul{
+padding-right: 10%;
+}
 
 .contact-info {
     list-style-type: none;
     font-size: 20px;
     color: #FFF;
     font-family: 'PT Sans Narrow', sans-serif;
-    margin-right:20%;
 }
 
 .contact-info i{
@@ -451,6 +458,9 @@ nav.menu a {
     background-color: #bbb;
   }
 
+#mTy {
+    padding-top: 15%; 
+}
 
 /* The Modal (background) */
 .modal {
@@ -568,6 +578,13 @@ nav.menu a {
     cursor: pointer;
 }
 
+.TyMessage{
+    text-align: center;
+}
+.TyMessage i{
+    color:rgb(99, 211, 68);
+}
+
 @media only screen and (min-width: 0px) and (max-width: 480px) { 
 
     .row {
@@ -636,13 +653,17 @@ nav.menu a {
     .footer-c-l{
         float: none;
         width: 100%;
-        height: 100%;
+        height: 20em;
     }
     
     .footer-c-r{
         float: none;
         width: 100%;
-        height: 100%;
+        height: 10em;
+    }
+
+    .footer-c{
+        height: 35em;
     }
 
 }
@@ -695,13 +716,18 @@ nav.menu a {
     .footer-c-l{
         float: none;
         width: 100%;
-        height: 100%;
+        height: 20em;
     }
     
     .footer-c-r{
         float: none;
         width: 100%;
-        height: 100%;
+        height: 10em;
+        margin: auto;
+    }
+
+    .footer-c-r ul{
+        padding-right: 25%;
     }
     
     .contact-info {
@@ -709,7 +735,7 @@ nav.menu a {
     }
 
     .footer-c{
-        height: 30em;
+        height: 35em;
     }
 }
 

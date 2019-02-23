@@ -6,7 +6,6 @@
     <title>Южный вестник</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <meta name="viewport" content="">
     <meta name="viewport" content="width=device-width">
 
     <!-- Open Graph -->
@@ -34,13 +33,14 @@
             <span class="close">&times;</span>
             <h2>Сделать заказ</h2>
             <div class="make-order">
-                <form role="form" id="r-form" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbz4dR8Jg_FRuNVCR2KkR0F_6Hg-OODLD5bqXZaJmA/exec">
+                <form role="form" id="r-form" method="POST" data-email="example@email.net"
+                    action="https://script.google.com/macros/s/AKfycbxMbCIujnnKMI-BCWheCZcCQK16GueSxu_e8SAudcekDxbSykOI/exec">
                     <label>Имя и Фамилия</label>
-                    <input type="text" class="form-control" name="Name" placeholder="Имя и Фамилия" required/>
+                    <input type="text" class="form-control" name="Name" placeholder="Имя и Фамилия" required />
                     <label>E-mail</label>
-                    <input type="email" class="form-control" name="Email" placeholder="Email" required/>
+                    <input type="email" class="form-control" name="Email" placeholder="Email" required />
                     <label>Телефон</label>
-                    <input type="phone" class="form-control" name="Phone" placeholder="Телефон"/>
+                    <input type="phone" class="form-control" name="Phone" placeholder="Телефон (не обязательно)" />
                     <label>Краткое описание заказа</label>
                     <textarea maxlength="560" type="description" id="Description" name="Description"
                         class="form-control" placeholder="Введите краткое описание вашего заказа" required></textarea>
@@ -48,6 +48,49 @@
                     <button id="sendRequest">Отправить</button>
                 </form>
 
+            </div>
+        </div>
+
+    </div>
+
+    <!-- The Question Modal -->
+    <div id="mQ" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Задать вопрос</h2>
+                <div class="make-order">
+                    <form role="form" id="r-form" method="POST" data-email="example@email.net"
+                        action="https://script.google.com/macros/s/AKfycbxMbCIujnnKMI-BCWheCZcCQK16GueSxu_e8SAudcekDxbSykOI/exec">
+                        <label>Имя и Фамилия</label>
+                        <input type="text" class="form-control" name="Name" placeholder="Имя и Фамилия" required />
+                        <label>E-mail</label>
+                        <input type="email" class="form-control" name="Email" placeholder="Email" required />
+                        <label>Телефон</label>
+                        <input type="phone" class="form-control" name="Phone" placeholder="Телефон (не обязательно)" />
+                        <label>Интересующая вас информация</label>
+                        <textarea maxlength="560" type="description" id="Description" name="Description"
+                            class="form-control" placeholder="Задайте интересующий вас вопрос" required></textarea>
+                        <p> Данная форма предназначена для обратной связи, тут вы можете задать любой интересующий вас вопрос и получить на него ответ по почте или по средством телефонного звонка, в зависимости от указанных вами контактов.</p>
+                        <button id="sendRequest">Отправить</button>
+                    </form>
+    
+                </div>
+            </div>
+    
+        </div>
+
+    <!-- ThankYou Modal -->
+    <div id="mTy" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Спасибо за ваш запрос!</h2>
+            <div class="TyMessage">
+                <i class="fas fa-check fa-3x"></i>
+                <p>Спасибо большое что обратились к нам в ближайшее время с вами свяжется наш сотрудник.</p>
             </div>
         </div>
 
@@ -123,7 +166,7 @@
         </div>
         <div class="main-content">
             <button id="main-btn" class="btn-white">Сделать заказ</button>
-            <div class="container">
+            <div class="container" >
                 <div class="row">
                     <div class="col">
                         <div class="m-text">
@@ -169,14 +212,14 @@
         </div>
     </header>
     <section id="faq">
-        <div class="s-container" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+        <div id="questionForm" class="s-container" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <p>Есть вопросы? Не знаете как сделать заказ? Не знаете какой тип штампа/печати/услуг полиграфии вам нужен?
                 Ответы
                 на все эти вопросы вы найдете здесь!</p>
         </div>
     </section>
     <section id="middle">
-        <div class="container">
+        <div class="container" data-aos="zoom-in">
             <h2>Цены</h2>
             <table>
                 <thead>
@@ -242,30 +285,35 @@
 
     <footer>
         <div id="contacts">
-            <h2 class="major1 white">Contacts</h2>
-            <p>Изготовим печати и штампы в течении часа, с последующим гарантийным обслуживанием! Изготовим по индивидуальному эскизу с элементами защиты.</p>
+            <div class="footer-h" data-aos="fade-down">
+                <h2 class="major1 white">Контакты</h2>
+                <p>Изготовим печати и штампы в течении часа, с последующим гарантийным обслуживанием! Изготовим по
+                    индивидуальному эскизу с элементами защиты.</p>
+            </div>
             <div class="footer-c">
-                <div class="footer-c-l">
-                    <form method="post" action="#">
+                <div class="footer-c-l" data-aos="fade-right">
+                    <form role="form" method="POST" data-email="example@email.net"
+                        action="https://script.google.com/macros/s/AKfycbxMbCIujnnKMI-BCWheCZcCQK16GueSxu_e8SAudcekDxbSykOI/exec">
                         <div class="field">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" />
+                            <label for="name">Имя и Фамилия</label>
+                            <input type="text" name="Name" id="name" />
                         </div>
                         <div class="field">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" />
+                            <input type="email" name="Email" id="email" />
                         </div>
                         <div class="field">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="4"></textarea>
+                            <label for="message">Сообщение</label>
+                            <textarea name="Description" id="description" rows="4"></textarea>
                         </div>
                         <button type="submit">Отправить</button>
                     </form>
                 </div>
-                <div class="footer-c-r">
+                <div class="footer-c-r" data-aos="fade-left">
                     <ul class="contact-info">
                         <li> <a href="callto:+380506520530"><i class="fas fa-phone"></i> (380)506520530</li></a>
-                        <li> <a href="mailto:vestnikodessa@ukr.net"></a><i class="fas fa-envelope"></i> <a href="#">information@gmail.com</a></li>
+                        <li> <a href="mailto:vestnikodessa@ukr.net"></a><i class="fas fa-envelope"></i> <a
+                                href="#">information@gmail.com</a></li>
                         <li> <i class="fas fa-map-marker-alt"></i> Южный Вестник<br /> Старобазарный сквер, 3A, Одесса
                         </li>
                     </ul>

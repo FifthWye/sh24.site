@@ -46,7 +46,7 @@
     formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
     formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
 
-    console.log(formData);
+    //console.log(formData);
     return formData;
   }
 
@@ -54,6 +54,10 @@
     event.preventDefault();           // we are submitting via xhr below
     var form = event.target;
     var data = getFormData(form);         // get the values submitted in the form
+    form.reset();   //resets form values
+    var modalForm = document.getElementById("m1");
+    modalForm.style.display = "none";
+
 
     /* OPTION: Remove this comment to enable SPAM prevention, see README.md
     if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
@@ -67,13 +71,13 @@
       // xhr.withCredentials = true;
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onreadystatechange = function() {
-          console.log(xhr.status, xhr.statusText);
-          console.log(xhr.responseText);
+          //console.log(xhr.status, xhr.statusText);
+          //console.log(xhr.responseText);
           var formElements = form.querySelector(".form-elements")
           if (formElements) {
             formElements.style.display = "none"; // hide form
           }
-          var thankYouMessage = form.querySelector(".thankyou_message");
+          var thankYouMessage = document.getElementById("mTy");
           if (thankYouMessage) {
             thankYouMessage.style.display = "block";
           }
@@ -87,9 +91,9 @@
   }
   
   function loaded() {
-    console.log("Contact form submission handler loaded successfully.");
+    //console.log("Contact form submission handler loaded successfully.");
     // bind to the submit event of our form
-    var forms = document.querySelectorAll("#r-form");
+    var forms = document.querySelectorAll("form");
     for (var i = 0; i < forms.length; i++) {
       forms[i].addEventListener("submit", handleFormSubmit, false);
     }
