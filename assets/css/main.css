@@ -126,6 +126,10 @@ padding-right: 10%;
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
+.contact-info div{
+    display: inline;
+}
+
 .contact-info i{
     height: 20px;
     width: 20px;
@@ -172,7 +176,7 @@ futer-c-r a{
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     margin-top: 10px;
-    width: 200px
+    width: 200px;
 }
 
 #contacts form button:hover{
@@ -643,7 +647,7 @@ nav.menu a {
     }
 
     .make-order button{
-        width: 30%;
+        width: 100%;
     }
 
     #middle table th, td {
@@ -665,6 +669,22 @@ nav.menu a {
     .footer-c{
         height: 35em;
     }
+
+    #contacts form button{
+        width: 100%;
+    }
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2%;
+    width: 60%;
+}
+
+.make-order{
+    padding:5%;
+}
 
 }
 
