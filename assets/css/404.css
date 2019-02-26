@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background: linear-gradient(90deg, #0f7a0f 1% , #99ff66 99%);
+
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.error{
+    position: absolute;
+    height: 30%;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    
+}
+
+.message{
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+.message a{
+    text-decoration: none;
+}
+
+.error h1{
+    margin: 0px;
+}
