@@ -59,7 +59,7 @@ showQuestionModal.onclick = function () {
 
 // When the user clicks on <span> (x), close the modal
 for (var i = 0, len = span.length; i < len; i++) {
-  console.log(span[i]);
+  //console.log(span[i]);
   span[i].addEventListener("click",closeModals);
 }
 

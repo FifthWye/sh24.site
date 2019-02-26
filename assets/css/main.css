@@ -205,7 +205,7 @@ futer-c-r a{
 }
 
 .nav-b-left h1{
-    display:none;
+    display:none !important;
 }
 
 .nav-b-right{
