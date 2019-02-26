@@ -204,6 +204,10 @@ futer-c-r a{
     float: left;
 }
 
+.nav-b-left h1{
+    display:none;
+}
+
 .nav-b-right{
     width: 50%;
     height: 60px;
